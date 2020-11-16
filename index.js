@@ -12,7 +12,7 @@ class GreenlockProxy {
         var Greenlock = require('@root/greenlock');
         this.greenlock = Greenlock.create({
             packageRoot: __dirname,
-            configDir: "./greenlock.d/",
+            configDir: "../../greenlock.d/",
             packageAgent: pkg.name + '/' + pkg.version,
             maintainerEmail: this.maintainerEmail,
             staging: staging
@@ -43,7 +43,7 @@ class GreenlockProxy {
                 // contact for security and critical bug notices
                 maintainerEmail: this.maintainerEmail,
                 // where to look for configuration
-                configDir: './greenlock.d',
+                configDir: '../../greenlock.d',
                 // whether or not to run at cloudscale
                 cluster: false
             })

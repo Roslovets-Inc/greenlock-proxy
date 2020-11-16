@@ -1,6 +1,6 @@
 {
   "name": "greenlock-proxy",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "HTTPS proxy wrapper for greenlock",
   "main": "index.js",
   "scripts": {},
