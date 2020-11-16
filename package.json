@@ -8,8 +8,8 @@
   "license": "ISC",
   "homepage": "https://github.com/Roslovets-Inc/greenlock-proxy",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Roslovets-Inc/greenlock-proxy"
+    "type": "git",
+    "url": "https://github.com/Roslovets-Inc/greenlock-proxy"
   },
   "dependencies": {
     "greenlock-express": "^4.0.3",

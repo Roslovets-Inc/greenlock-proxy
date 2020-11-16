@@ -11,7 +11,7 @@ class GreenlockProxy {
 
     constructor(opts) {
         this.maintainerEmail = opts.maintainerEmail;
-        staging = opts.staging | false;
+        var staging = opts.staging || false;
         var pkg = require('./package.json');
         var Greenlock = require('greenlock');
         this.greenlock = Greenlock.create({
