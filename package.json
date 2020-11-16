@@ -1,0 +1,13 @@
+{
+  "name": "greenlock-proxy",
+  "version": "0.1.0",
+  "description": "HTTPS proxy wrapper for greenlock",
+  "main": "index.js",
+  "scripts": {},
+  "author": "https://github.com/roslovets",
+  "license": "ISC",
+  "dependencies": {
+    "greenlock-express": "^4.0.3",
+    "http-proxy": "^1.18.1"
+  }
+}
