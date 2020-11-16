@@ -9,7 +9,7 @@ class GreenlockProxy {
         this.maintainerEmail = opts.maintainerEmail;
         var staging = opts.staging || false;
         var pkg = require('./package.json');
-        var Greenlock = require('greenlock');
+        var Greenlock = require('@root/greenlock');
         this.greenlock = Greenlock.create({
             packageRoot: __dirname,
             configDir: "./greenlock.d/",
