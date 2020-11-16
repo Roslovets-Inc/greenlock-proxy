@@ -1,7 +1,3 @@
-var pkg = require('./package.json');
-var Greenlock = require('greenlock');
-
-
 class GreenlockProxy {
 
     maintainerEmail
