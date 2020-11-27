@@ -1,5 +1,9 @@
 # Greenlock Proxy Wrapper
 
+Automatically get free SSL certificates from [Let’s Encrypt](https://letsencrypt.org/) and serve your sites over HTTPS.
+
+Based on (greenlock-express)[https://github.com/coolaj86/greenlock-express].
+
 ## How to Install
 
 ```bash
