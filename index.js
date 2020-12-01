@@ -1,7 +1,7 @@
 class GreenlockProxy {
 
     maintainerEmail
-    targets = []
+    rules = []
     proxy
     greenlock
 
@@ -25,10 +25,16 @@ class GreenlockProxy {
             })
     }
 
-    register(domains, target) {
-        this.targets.push({
+    register(domains, targets) {
+        if (!Array.isArray(domains)) {
+            domains = [domains];
+        }
+        if (!Array.isArray(targets)) {
+            targets = [targets];
+        }
+        this.rules.push({
             domains: domains,
-            target: target
+            targets: targets
         })
         this.greenlock.add({
             subject: domains[0],
@@ -66,16 +72,17 @@ class GreenlockProxy {
     }
 
     serveFcn(req, res) {
-        this.targets.forEach(target => {
-            this.bindTarget(req, res, this.proxy, target.domains, target.target);
+        this.rules.forEach(rule => {
+            this.bindTarget(req, res, this.proxy, rule.domains, rule.targets);
         })
     }
 
 
-    bindTarget(req, res, proxy, domains, target) {
+    bindTarget(req, res, proxy, domains, targets) {
         if (domains.includes(req.headers.host)) {
+            let i = (Math.floor(Math.random() * targets.length));
             proxy.web(req, res, {
-                target: target
+                target: targets[i]
             })
         }
     }

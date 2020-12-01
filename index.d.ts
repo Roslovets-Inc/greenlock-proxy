@@ -5,9 +5,9 @@ declare module 'greenlock-proxy' {
   export default class GreenlockProxy {
     maintainerEmail: string;
 
-    targets: Array<{
+    rules: Array<{
       domains: string[];
-      target: string;
+      targets: string[];
     }>;
 
     proxy: ProxyServer | null;
@@ -23,7 +23,7 @@ declare module 'greenlock-proxy' {
       staging?: boolean;
     });
 
-    register(domains: string[], target: string): void;
+    register(domains: string[], targets: string[]): void;
 
     start(): void;
 
@@ -31,6 +31,6 @@ declare module 'greenlock-proxy' {
 
     serveFcn(req: ClientRequest, res: ServerResponse): void;
 
-    bindTarget(req: ClientRequest, res: ServerResponse, proxy: ProxyServer, domains: string[], target: string): void;
+    bindTarget(req: ClientRequest, res: ServerResponse, proxy: ProxyServer, domains: string[], targets: string[]): void;
   }
 }
