@@ -8,11 +8,19 @@
   },
   "author": "https://github.com/roslovets",
   "license": "ISC",
-  "homepage": "https://github.com/Roslovets-Inc/greenlock-proxy",
+  "homepage": "https://github.com/Roslovets-Inc/greenlock-proxy#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/Roslovets-Inc/greenlock-proxy"
   },
+  "keywords": [
+    "SSL",
+    "ZeroSSL",
+    "proxy",
+    "Let's Encrypt",
+    "ACME",
+    "greenlock"
+  ],
   "dependencies": {
     "greenlock-express": "^4.0.3",
     "http-proxy": "^1.18.1"
