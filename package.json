@@ -3,7 +3,9 @@
   "version": "0.2.0",
   "description": "HTTPS proxy wrapper for greenlock",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "postversion": "git push && git push --tags"
+  },
   "author": "https://github.com/roslovets",
   "license": "ISC",
   "homepage": "https://github.com/Roslovets-Inc/greenlock-proxy",
